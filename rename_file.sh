@@ -5,10 +5,9 @@
  # by using for loop
 
 
-for f in *;
-    do
-     if [ -f "$f" ]; then
-       tr 'A-Z' 'a-z'
-     fi
-   done
-
+for f in *
+do
+    if [ -f $f ]; then 
+        echo "$f" | tr 'A-Z' 'a-z' >/dev/null
+    fi
+done
